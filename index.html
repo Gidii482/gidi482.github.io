@@ -2,68 +2,1337 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Online Jobs Africa - practical guides to remote jobs, AI jobs, freelancing, data entry and online work.">
-<meta name="keywords" content="online jobs Africa, Kenya online jobs, remote jobs, AI jobs, freelancing, data entry">
-<title>Online Jobs Africa | Find Online Work & Remote Jobs</title>
-<link rel="stylesheet" href="assets/style.css">
+
+<title>Online Jobs Africa | Online Jobs, AI Jobs & Remote Work</title>
+
+<meta name="description"
+content="Discover legitimate online jobs, AI jobs, freelancing opportunities and remote work opportunities for Africans.">
+
+<meta name="keywords"
+content="online jobs Africa, online jobs Kenya, AI jobs, remote jobs, freelancing, data entry, work from home">
+
+<meta name="author" content="Online Jobs Africa">
+
+<style>
+
+/* ================================
+   GLOBAL
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7faf8;
+    color:#14213d;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================================
+   TOP BAR
+================================ */
+
+.topbar{
+    background:#063d24;
+    color:white;
+    padding:10px 0;
+    font-size:14px;
+}
+
+.topbar-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-links{
+    display:flex;
+    gap:20px;
+}
+
+.top-links a:hover{
+    color:#8ff0b5;
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    height:78px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:800;
+}
+
+.logo-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#0a7d43;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.logo span{
+    color:#07863f;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links a{
+    font-weight:600;
+    color:#263238;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:#087f42;
+}
+
+.nav-button{
+    background:#087f42;
+    color:white !important;
+    padding:11px 18px;
+    border-radius:8px;
+}
+
+.menu-button{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    background:
+    radial-gradient(circle at 75% 40%,rgba(15,150,80,.12),transparent 35%),
+    linear-gradient(135deg,#effaf3,#ffffff);
+
+    padding:85px 0 70px;
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:50px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ddf8e8;
+    color:#087f42;
+    padding:8px 15px;
+    border-radius:30px;
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(40px,5vw,68px);
+    line-height:1.08;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#07863f;
+}
+
+.hero p{
+    font-size:19px;
+    color:#5c6775;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 25px;
+    border-radius:8px;
+    font-weight:700;
+    display:inline-block;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#07863f;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#056b32;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:2px solid #07863f;
+    color:#07863f;
+}
+
+.btn-outline:hover{
+    background:#07863f;
+    color:white;
+}
+
+.hero-features{
+    display:flex;
+    gap:25px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#4f5d6b;
+    font-size:14px;
+}
+
+.feature-icon{
+    color:#07863f;
+    font-weight:bold;
+}
+
+/* ================================
+   HERO VISUAL
+================================ */
+
+.hero-card{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+    position:relative;
+}
+
+.hero-screen{
+    background:linear-gradient(145deg,#0b7540,#13a45b);
+    border-radius:18px;
+    padding:35px;
+    color:white;
+    min-height:330px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-screen h3{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.hero-screen p{
+    color:#e5fff0;
+    font-size:16px;
+}
+
+.stat-box{
+    background:white;
+    color:#14213d;
+    border-radius:12px;
+    padding:15px;
+    position:absolute;
+    right:-20px;
+    bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.stat-number{
+    font-size:24px;
+    font-weight:800;
+    color:#07863f;
+}
+
+/* ================================
+   ADVERTISEMENT
+================================ */
+
+.ad-container{
+    width:100%;
+    max-width:1000px;
+    margin:35px auto;
+    text-align:center;
+}
+
+.ad-label{
+    color:#999;
+    font-size:10px;
+    letter-spacing:1px;
+    margin-bottom:7px;
+}
+
+.ad-slot{
+    min-height:90px;
+    background:#f1f3f5;
+    border:1px dashed #ccd2d8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#9aa1a8;
+}
+
+/* ================================
+   SECTION
+================================ */
+
+section{
+    padding:70px 0;
+}
+
+.section-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:30px;
+}
+
+.section-heading h2{
+    font-size:34px;
+}
+
+.section-heading p{
+    color:#65717e;
+}
+
+/* ================================
+   CATEGORY CARDS
+================================ */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.category{
+    background:white;
+    border:1px solid #e6ebe8;
+    border-radius:14px;
+    padding:22px 16px;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    border-color:#b9e7ca;
+}
+
+.category-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#e5f8ed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.category h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.category p{
+    color:#697582;
+    font-size:13px;
+}
+
+.category-link{
+    display:block;
+    margin-top:13px;
+    color:#087f42;
+    font-weight:700;
+    font-size:13px;
+}
+
+/* ================================
+   ARTICLES
+================================ */
+
+.articles{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.article{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #e5eae7;
+    transition:.25s;
+}
+
+.article:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.09);
+}
+
+.article-image{
+    height:170px;
+    background:linear-gradient(135deg,#075d35,#16a65c);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:45px;
+}
+
+.article-body{
+    padding:22px;
+}
+
+.article-tag{
+    display:inline-block;
+    background:#e4f8ec;
+    color:#07863f;
+    font-size:11px;
+    font-weight:800;
+    padding:5px 9px;
+    border-radius:20px;
+    margin-bottom:12px;
+}
+
+.article h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.article p{
+    color:#687482;
+    font-size:14px;
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:15px;
+    color:#087f42;
+    font-weight:700;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.cta{
+    background:#063d24;
+    color:white;
+    border-radius:22px;
+    padding:55px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#d2e9dc;
+    max-width:650px;
+    margin:0 auto 25px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#10251b;
+    color:#d5ded9;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:21px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+    margin:7px 0;
+    color:#c7d2cc;
+}
+
+footer a:hover{
+    color:#7ce0a2;
+}
+
+.footer-bottom{
+    border-top:1px solid #294238;
+    margin-top:35px;
+    padding-top:20px;
+    text-align:center;
+    font-size:13px;
+    color:#94a49b;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:1000px){
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .articles{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .top-links{
+        display:none;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:white;
+        padding:20px;
+        flex-direction:column;
+        align-items:flex-start;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .categories{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .articles{
+        grid-template-columns:1fr;
+    }
+
+    .section-heading{
+        display:block;
+    }
+
+    .section-heading p{
+        margin-top:8px;
+    }
+
+    .cta{
+        padding:35px 20px;
+    }
+
+    .cta h2{
+        font-size:29px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+<div class="container topbar-content">
+
+<div>
+🌍 Africa's Resource for Online Jobs & Remote Work
+</div>
+
+<div class="top-links">
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#privacy">Privacy</a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="index.html">Online Jobs <span>Africa</span></a>
-    <button class="menu" onclick="toggleMenu()">☰</button>
-    <nav id="nav">
-      <a href="index.html">Home</a><a href="jobs.html">Online Jobs</a><a href="ai-jobs.html">AI Jobs</a>
-      <a href="freelancing.html">Freelancing</a><a href="remote-jobs.html">Remote Jobs</a>
-      <a href="make-money.html">Make Money</a>
-    </nav>
-  </div>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+
+<div class="logo-icon">🌍</div>
+
+<div>
+Online Jobs<br>
+<span>Africa</span>
+</div>
+
+</a>
+
+
+<button class="menu-button" onclick="toggleMenu()">
+☰
+</button>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+
+<a href="#jobs">Online Jobs</a>
+
+<a href="#ai">AI Jobs</a>
+
+<a href="#freelancing">Freelancing</a>
+
+<a href="#remote">Remote Jobs</a>
+
+<a href="#money">Make Money</a>
+
+<a href="#latest" class="nav-button">
+Latest Jobs
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<section class="hero">
-  <div class="container">
-    <p class="eyebrow">WORK SMART • WORK ONLINE</p>
-    <h1>Find Legitimate Online Work From Africa</h1>
-    <p class="hero-text">Practical guides for online jobs, AI opportunities, freelancing, data entry, tutoring and remote work.</p>
-    <div class="hero-actions">
-      <a class="btn" href="jobs.html">Explore Online Jobs</a>
-      <a class="btn secondary" href="ai-jobs.html">Explore AI Jobs</a>
-    </div>
-  </div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+💼 WORK SMART • WORK ONLINE
+</div>
+
+<h1>
+Find Legitimate Online
+<span>Work From Africa</span>
+</h1>
+
+<p>
+Discover practical guides to online jobs, AI opportunities,
+freelancing, data entry, remote work and ways to build
+income online.
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#jobs" class="btn btn-primary">
+Explore Online Jobs →
+</a>
+
+<a href="#ai" class="btn btn-outline">
+Explore AI Jobs
+</a>
+
+</div>
+
+
+<div class="hero-features">
+
+<div class="feature">
+<span class="feature-icon">✓</span>
+Real Opportunities
+</div>
+
+<div class="feature">
+<span class="feature-icon">✓</span>
+Step-by-Step Guides
+</div>
+
+<div class="feature">
+<span class="feature-icon">✓</span>
+Free Resources
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-screen">
+
+<h3>
+Build Your Online Career
+</h3>
+
+<p>
+Learn skills. Find opportunities.
+Work from anywhere.
+</p>
+
+<br>
+
+<div>
+💼 Online Jobs
+</div>
+
+<div>
+🤖 AI Opportunities
+</div>
+
+<div>
+🚀 Freelancing
+</div>
+
+<div>
+🌍 Remote Work
+</div>
+
+</div>
+
+
+<div class="stat-box">
+
+<div class="stat-number">
+100%
+</div>
+
+Free Resources
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<main class="container">
-  <section class="section">
-    <h2>Popular Categories</h2>
-    <div class="cards">
-      <a class="card" href="jobs.html"><div class="icon">💼</div><h3>Online Jobs</h3><p>Beginner-friendly opportunities you can pursue with a computer or phone.</p></a>
-      <a class="card" href="ai-jobs.html"><div class="icon">🤖</div><h3>AI Jobs</h3><p>Explore AI training, data annotation and other emerging opportunities.</p></a>
-      <a class="card" href="freelancing.html"><div class="icon">🚀</div><h3>Freelancing</h3><p>Learn how to find clients and sell your skills online.</p></a>
-      <a class="card" href="data-entry.html"><div class="icon">⌨️</div><h3>Data Entry</h3><p>Learn about data-entry and microtask opportunities.</p></a>
-      <a class="card" href="remote-jobs.html"><div class="icon">🌍</div><h3>Remote Jobs</h3><p>Discover work-from-home roles and application tips.</p></a>
-      <a class="card" href="tutoring.html"><div class="icon">📚</div><h3>Online Tutoring</h3><p>Turn your knowledge into an online tutoring income stream.</p></a>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="section-head"><h2>Latest Guides</h2><a href="make-money.html">View all →</a></div>
-    <div class="articles">
-      <article><span class="tag">ONLINE JOBS</span><h3><a href="articles/online-jobs-kenya.html">Best Online Jobs in Kenya for Beginners</a></h3><p>A practical starting point for finding legitimate online work.</p></article>
-      <article><span class="tag">AI</span><h3><a href="articles/ai-training-jobs.html">How to Find AI Training Jobs</a></h3><p>Understand the skills and platforms commonly used for AI training work.</p></article>
-      <article><span class="tag">FREELANCING</span><h3><a href="articles/first-freelance-client.html">How to Get Your First Freelance Client</a></h3><p>A simple approach to building proof, pitching and winning your first client.</p></article>
-    </div>
-  </section>
 
-  <section class="ad-box"><p>ADVERTISEMENT</p><div><script src="https://pl30849399.effectivecpmnetwork.com/a7/7e/50/a77e50b10535e9ad9f71c04384b8c69d.js"></script>
-</div><script async="async" data-cfasync="false" src="https://pl30849400.effectivecpmnetwork.com/e6838a24d116fc8465a311201d4c5732/invoke.js"></script>
-<div id="container-e6838a24d116fc8465a311201d4c5732"></div>
+<!-- ADSTER​​RA AD SLOT 1 -->
+
+<div class="container">
+
+<div class="ad-container">
+
+<div class="ad-label">
+ADVERTISEMENT
+</div>
+
+<div class="ad-slot">
+
+<!-- =====================================
+     ADSTERRA CODE GOES HERE
+     =====================================
+
+     AFTER YOUR WEBSITE IS APPROVED:
+
+     Adsterra Dashboard
+     → Websites
+     → Your Website
+     → Get Code
+
+     Paste the code supplied by Adsterra
+     in this location.
+
+========================================= -->
+
+<span>
+Adsterra Advertisement
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- CATEGORIES -->
+
+<section id="jobs">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div>
+
+<h2>
+Popular Categories
+</h2>
+
+<p>
+Choose an opportunity that matches your skills.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="categories">
+
+
+<a class="category" href="#onlinejobs">
+
+<div class="category-icon">
+💼
+</div>
+
+<h3>
+Online Jobs
+</h3>
+
+<p>
+Beginner-friendly jobs you can do online.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+<a class="category" href="#ai">
+
+<div class="category-icon">
+🤖
+</div>
+
+<h3>
+AI Jobs
+</h3>
+
+<p>
+AI training and data annotation opportunities.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+<a class="category" href="#freelancing">
+
+<div class="category-icon">
+🚀
+</div>
+
+<h3>
+Freelancing
+</h3>
+
+<p>
+Sell your skills and find clients online.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+<a class="category" href="#data">
+
+<div class="category-icon">
+⌨️
+</div>
+
+<h3>
+Data Entry
+</h3>
+
+<p>
+Research data entry and microtask work.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+<a class="category" href="#remote">
+
+<div class="category-icon">
+🌍
+</div>
+
+<h3>
+Remote Jobs
+</h3>
+
+<p>
+Work remotely for companies worldwide.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+<a class="category" href="#money">
+
+<div class="category-icon">
+💰
+</div>
+
+<h3>
+Make Money
+</h3>
+
+<p>
+Learn legitimate ways to earn online.
+</p>
+
+<span class="category-link">
+Explore →
+</span>
+
+</a>
+
+
+</div>
+
+</div>
+
 </section>
-</main>
 
-<footer><div class="container footer-grid">
-  <div><strong>Online Jobs Africa</strong><p>Practical information for people looking for legitimate online opportunities.</p></div>
-  <div><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
-</div><div class="copyright">© 2026 Online Jobs Africa. All rights reserved.</div></footer>
-<script src="assets/script.js"></script>
-</body></html>
+
+
+<!-- SECOND AD -->
+
+<div class="container">
+
+<div class="ad-container">
+
+<div class="ad-label">
+ADVERTISEMENT
+</div>
+
+<div class="ad-slot">
+
+<!-- PASTE ANOTHER ADSTERRA AD CODE HERE -->
+
+<span>
+Adsterra Advertisement
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- POPULAR ARTICLES -->
+
+<section id="latest">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div>
+
+<h2>
+Popular Opportunities
+</h2>
+
+<p>
+Explore some of our most useful guides.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="articles">
+
+
+<article class="article">
+
+<div class="article-image">
+💼
+</div>
+
+<div class="article-body">
+
+<span class="article-tag">
+ONLINE JOBS
+</span>
+
+<h3>
+Online Jobs for Beginners
+</h3>
+
+<p>
+Learn how beginners can start searching
+for legitimate online work.
+</p>
+
+<a href="#onlinejobs" class="read-more">
+Read Guide →
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="article">
+
+<div class="article-image">
+🤖
+</div>
+
+<div class="article-body">
+
+<span class="article-tag">
+AI JOBS
+</span>
+
+<h3>
+AI Training Jobs
+</h3>
+
+<p>
+Discover AI training, evaluation and
+data annotation opportunities.
+</p>
+
+<a href="#ai" class="read-more">
+Read Guide →
+</a>
+
+</div>
+
+</article>
+
+
+
+<article class="article">
+
+<div class="article-image">
+🚀
+</div>
+
+<div class="article-body">
+
+<span class="article-tag">
+FREELANCING
+</span>
+
+<h3>
+Start Freelancing
+</h3>
+
+<p>
+Learn how to turn your existing skills
+into freelance services.
+</p>
+
+<a href="#freelancing" class="read-more">
+Read Guide →
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- INFORMATION -->
+
+<section id="onlinejobs">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Ready to Start Working Online?
+</h2>
+
+<p>
+Learn new skills, discover opportunities and
+build your online career one step at a time.
+</p>
+
+<a href="#latest" class="btn btn-primary">
+Explore Opportunities
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+Online Jobs Africa
+</div>
+
+<p>
+A resource for Africans looking for legitimate
+online jobs, remote work, AI opportunities
+and freelancing opportunities.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Categories
+</h3>
+
+<a href="#jobs">
+Online Jobs
+</a>
+
+<a href="#ai">
+AI Jobs
+</a>
+
+<a href="#freelancing">
+Freelancing
+</a>
+
+<a href="#remote">
+Remote Jobs
+</a>
+
+</div>
+
+
+<div id="about">
+
+<h3>
+Company
+</h3>
+
+<a href="#about">
+About Us
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a href="#privacy">
+Privacy Policy
+</a>
+
+</div>
+
+
+<div id="contact">
+
+<h3>
+Contact
+</h3>
+
+<p>
+Have an opportunity or suggestion?
+</p>
+
+<p style="margin-top:10px;">
+📧 contact@onlinejobsafrica.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="container footer-bottom">
+
+© <span id="year"></span>
+Online Jobs Africa. All rights reserved.
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+function toggleMenu(){
+
+const menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+/* Close mobile menu when a link is clicked */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
+
+
+</script>
+
+
+</body>
+</html>
